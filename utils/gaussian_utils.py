@@ -20,6 +20,6 @@ def blur_mask(mask, num_conv_steps, gaussian_kernel_size, gaussian_kernel_std):
   m_w = 0
   for _ in range(num_conv_steps):
     m_i = neg_mask + m_w
-    m_w = tf.nn.conv2d(m_i, filter=gaussian_filter, strides=[1, 1, 1, 1], padding='SAME') * mask
+    m_w = tf.nn.conv2d(m_i, filters=gaussian_filter, strides=[1, 1, 1, 1], padding='SAME') * mask
   m_w = tf.concat([m_w, m_w, m_w], axis=3)
   return m_w
