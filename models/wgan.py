@@ -70,8 +70,10 @@ class WassersteinGAN:
   
   def train_generator(self, inputs, outputs):
     batch_g_inputs = self.get_batch(inputs, 0)
-    print("Batch Inputs:", batch_g_inputs)
+    # print("Batch Inputs:", batch_g_inputs)
+    print("Type of Element:", type(batch_g_inputs[0]))
     print("Type of Batch Inputs:", type(batch_g_inputs))
+    # print("Shape of Batch Inputs:", batch_g_inputs.shape)
     batch_g_outputs = self.get_batch(outputs, 0)
     generator_loss = self.generator.train_on_batch(batch_g_inputs, batch_g_outputs)
     return generator_loss
