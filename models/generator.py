@@ -144,7 +144,7 @@ class Generator(BaseModel):
     
     decoder = Conv2D(filters=16, kernel_size=3, strides=(1, 1), padding='same')(decoder)
     decoder = ELU()(decoder)
-    decoder = Conv2D(filters=1, kernel_size=3, strides=(1, 1), padding='same')(decoder)
+    decoder = Conv2D(filters=3, kernel_size=3, strides=(1, 1), padding='same')(decoder)
     
     # linearly norm to (-1, 1)
     decoder = Clip()(decoder)
