@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras import backend as K
-from tensorflow.python.keras.layers.merge import _Merge
+# from tensorflow.python.keras.layers.merge import _Merge
+from tensorflow.keras.layers.merge import _Merge
 from tensorflow.keras.layers import Layer, subtract
 
 
